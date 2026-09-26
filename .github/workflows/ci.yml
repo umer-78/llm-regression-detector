@@ -21,4 +21,4 @@ jobs:
       - run: pytest -q
       # the upgrade under review: fails the build if any task regressed
       - name: Regression gate
-        run: python -m regress compare gpt-4o-2024-05-13 gpt-4o-2024-08-06
+        run: python -m regress compare llama-3-70b llama-3.1-70b-instruct
