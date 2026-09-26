@@ -1,0 +1,106 @@
+[
+ {
+  "base": 0.7732366512854317,
+  "candidate": 0.7747747747747747,
+  "questions": 4551,
+  "broke": 157,
+  "fixed": 164,
+  "output_tokens": {
+   "base": 70.23159745110965,
+   "candidate": 57.065260382333555
+  },
+  "regressed": [],
+  "improved": []
+ },
+ {
+  "base": 0.7778510217534608,
+  "candidate": 0.7864205669083718,
+  "questions": 4551,
+  "broke": 263,
+  "fixed": 302,
+  "output_tokens": {
+   "base": 0.0,
+   "candidate": 0.0
+  },
+  "regressed": [],
+  "improved": [
+   "math",
+   "openbookqa"
+  ]
+ },
+ {
+  "base": 0.7084157328059767,
+  "candidate": 0.6262359920896506,
+  "questions": 4551,
+  "broke": 688,
+  "fixed": 314,
+  "output_tokens": {
+   "base": 0.0,
+   "candidate": 0.0
+  },
+  "regressed": [
+   "gsm8k"
+  ],
+  "improved": [
+   "legalbench",
+   "math"
+  ]
+ },
+ {
+  "base": 0.6084377059986816,
+  "candidate": 0.5750384530872336,
+  "questions": 4551,
+  "broke": 700,
+  "fixed": 548,
+  "output_tokens": {
+   "base": 0.0,
+   "candidate": 0.0
+  },
+  "regressed": [
+   "legalbench",
+   "mmlu",
+   "openbookqa"
+  ],
+  "improved": [
+   "gsm8k",
+   "math"
+  ]
+ },
+ {
+  "base": 0.6276438760452533,
+  "candidate": 0.6871618298081653,
+  "questions": 4066,
+  "broke": 331,
+  "fixed": 573,
+  "output_tokens": {
+   "base": 46.1588785046729,
+   "candidate": 71.90457452041318
+  },
+  "regressed": [
+   "math"
+  ],
+  "improved": [
+   "gsm8k",
+   "mmlu",
+   "openbookqa"
+  ]
+ },
+ {
+  "base": 0.7470885519666007,
+  "candidate": 0.7400571303010327,
+  "questions": 4551,
+  "broke": 560,
+  "fixed": 528,
+  "output_tokens": {
+   "base": 1.0,
+   "candidate": 51.128103713469564
+  },
+  "regressed": [
+   "legalbench"
+  ],
+  "improved": [
+   "gsm8k",
+   "math"
+  ]
+ }
+]
