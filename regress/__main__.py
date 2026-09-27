@@ -33,7 +33,10 @@ def main(argv=None):
     for base, cand in data.config()["pairs"]:
         overall, results, text = run_pair(base, cand)
         texts.append(text)
-        summary.append({"base": base, "candidate": cand, **overall,
+        # overall's "base" and "candidate" are accuracies, so the model names get their own keys
+        summary.append({"base_model": base, "candidate_model": cand, **overall,
+                        "tasks": [{k: getattr(r, k) for k in ("task", "questions", "base", "candidate", "broke", "fixed", "p_adjusted", "verdict")}
+                                  for r in results],
                         "regressed": [r.task for r in results if r.verdict == "regressed"],
                         "improved": [r.task for r in results if r.verdict == "improved"]})
     (RESULTS / "report.md").write_text("\n\n".join(texts) + "\n")

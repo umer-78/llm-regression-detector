@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/umer-78/llm-regression-detector/actions/workflows/ci.yml/badge.svg)](https://github.com/umer-78/llm-regression-detector/actions/workflows/ci.yml)
 
+**Live demo:** https://umer-78.github.io/llm-regression-detector/ (pick an upgrade and see which tasks it broke)
+
 Catches the tasks a model upgrade breaks before it ships. Every question is compared across the
 old and new version (stayed right, broke, got fixed); per task, McNemar's exact test with Holm's
 correction decides whether the breakage is more than chance, and CI fails if any task regressed
@@ -25,6 +27,7 @@ pip install -e '.[dev]'
 pytest -q
 python -m regress compare gpt-4o-2024-05-13 gpt-4o-2024-08-06   # exit 1 if any task regressed
 python -m regress bench                                          # every pair in regress/versions.yaml
+python -m regress.demo                                           # rebuild the live demo's data in docs/
 ```
 
 Add a version to `regress/versions.yaml` to test it; the branch `demo/llama-upgrade` gates the
