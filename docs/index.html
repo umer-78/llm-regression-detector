@@ -1,20 +1,27 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-scene="regression">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>LLM Regression Detector · Umer Hashmi</title>
   <meta name="description" content="Six real model upgrades compared question by question on HELM Lite: which tasks got worse, with McNemar tests and Holm correction.">
+  <meta name="theme-color" content="#b42318">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="kit.css">
-  <style>:root { --accent: #b42318; --on-accent: #fff; } @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --accent: #ff7b72; --on-accent: #0f0e0c; } }</style>
+  <link rel="stylesheet" href="fx.css">
+  <style>:root { --accent: #b42318; --fx-2: #f59e0b; --fx-3: #6366f1; --on-accent: #fff; } @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --accent: #ff7b72; --on-accent: #0f0e0c; } }</style>
 </head>
 <body>
   <div class="wrap">
-    <header>
-      <a class="crumb" href="https://umer-78.github.io/">← All projects</a>
+    <nav class="fx-nav" aria-label="On this page"><a class="fx-home" href="https://umer-78.github.io/">← All projects</a><a class="fx-gh" href="https://github.com/umer-78/llm-regression-detector">GitHub</a></nav>
+    <header class="fx-hero">
+      <span class="fx-eyebrow">LLM engineering · Python</span>
       <h1>LLM Regression Detector</h1>
       <p class="lede">A model upgrade can raise the average and still break the task your product depends on. This tool compares two model versions on the same questions, task by task, and fails the build when a task got significantly worse. Below: six real upgrades, measured on HELM Lite's recorded answers from both versions.</p>
       <div class="links"><a class="btn primary" href="#upgrade">Pick an upgrade</a><a class="btn" href="https://github.com/umer-78/llm-regression-detector">Code and method</a></div>
+      <div class="fx-tags" aria-hidden="true"><div><span>python</span><span>llm</span><span>evaluation</span><span>statistics</span><span>ci</span><span>helm</span><span>python</span><span>llm</span><span>evaluation</span><span>statistics</span><span>ci</span><span>helm</span></div></div>
     </header>
     <main>
       <section class="kpis" id="kpis"></section>
@@ -36,5 +43,6 @@
     <footer>Built by <a href="https://github.com/umer-78">Umer Hashmi</a> · Per-question answers from <a href="https://crfm.stanford.edu/helm/lite/">HELM Lite</a> (Stanford CRFM), downloaded at run time; this page shows only aggregate numbers</footer>
   </div>
   <script type="module" src="app.js"></script>
+  <script type="module" src="fx.js"></script>
 </body>
 </html>
