@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/umer-78/llm-regression-detector/actions/workflows/ci.yml/badge.svg)](https://github.com/umer-78/llm-regression-detector/actions/workflows/ci.yml)
 
+[![LLM Regression Detector: the live demo](.github/preview.jpg)](https://umer-78.github.io/llm-regression-detector/)
+
 **Live demo:** https://umer-78.github.io/llm-regression-detector/ (pick an upgrade and see which tasks it broke)
 
 Catches the tasks a model upgrade breaks before it ships. Every question is compared across the
