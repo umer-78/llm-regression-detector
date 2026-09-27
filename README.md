@@ -31,5 +31,5 @@ python -m regress.demo                                           # rebuild the l
 ```
 
 Add a version to `regress/versions.yaml` to test it; the branch `demo/llama-upgrade` gates the
-Llama upgrade and its CI fails. Answers here are HELM's recorded ones; a live runner is the next
+Llama upgrade: its CI passes only because the gate refuses it, and the log shows the legalbench regression. Answers here are HELM's recorded ones; a live runner is the next
 step. MIT licence; HELM results keep their own licences and are downloaded, not redistributed.
