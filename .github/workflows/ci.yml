@@ -19,6 +19,15 @@ jobs:
           key: regress-${{ hashFiles('regress/versions.yaml') }}
       - run: pip install -e '.[dev]'
       - run: pytest -q
-      # the upgrade under review: fails the build if any task regressed
-      - name: Regression gate
-        run: python -m regress compare llama-3-70b llama-3.1-70b-instruct
+      # This branch is a demonstration: it carries the Llama 3 to 3.1 70B upgrade, which the gate exists to refuse. The job
+      # passes only when the gate fails it for that reason, and fails if the gate lets it through.
+      - name: Gate (must refuse this change)
+        shell: bash
+        run: |
+          set +e
+          python -m regress compare llama-3-70b llama-3.1-70b-instruct 2>&1 | tee gate.log
+          status=${PIPESTATUS[0]}
+          set -e
+          if [ "$status" -eq 0 ]; then echo "::error::the gate let this change through"; exit 1; fi
+          grep -qF -- '**regressed**' gate.log || { echo "::error::the gate failed for another reason"; exit 1; }
+          echo "::notice::The gate refused this change, as it should."
