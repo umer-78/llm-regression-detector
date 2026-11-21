@@ -7,7 +7,6 @@ whether broken outnumbers fixed by more than chance; Holm's correction keeps the
 any false alarm across tasks under 5%. A task regresses when the drop is significant and at
 least MIN_DROP points; that is what fails CI.
 """
-import math
 from dataclasses import dataclass, field
 
 import numpy as np
